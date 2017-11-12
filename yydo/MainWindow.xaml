@@ -5,8 +5,103 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:yydo"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
-    </Grid>
+        Title="MainWindow" Height="600" Width="400">
+    <Border Padding="10">
+
+        <StackPanel>
+            <!-- Buttons -->
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Button Margin="0 0 10 0" Grid.Column="0" x:Name="ApplyButton" Click="ApplyButton_Click">Apply</Button>
+                <Button Grid.Column="1">Reset</Button>
+                <Button Margin="10 0 0 0"  Grid.Column="2">Refresh</Button>
+            </Grid>
+            <TextBlock Text="Pulse Properties" FontWeight="Bold" Margin="0 10"></TextBlock>
+            <!--Description-->
+            <TextBlock Text="Description"></TextBlock>
+            <TextBox Padding="2" x:Name="Description"></TextBox>
+            <Grid Margin="0 10 0 0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <!-- Status -->
+                <StackPanel Grid.Column="0" Margin="0 0 10 0">
+                    <TextBlock Text="Status"></TextBlock>
+                    <TextBox IsReadOnly="True" Background="#eeeeee" Padding="2"></TextBox>
+                </StackPanel>
+                <!-- Revision -->
+                <StackPanel Grid.Column="1" >
+                    <TextBlock Text="Revision"></TextBlock>
+                    <TextBox IsReadOnly="True" Background="#eeeeee" Padding="2"></TextBox>
+                </StackPanel>
+            </Grid>
+            <!--Raw Material -->
+            <TextBlock Text="Raw Material" FontWeight="Bold" Margin="0 10"></TextBlock>
+            <!--Material-->
+            <TextBlock Text="Material"></TextBlock>
+            <ComboBox></ComboBox>
+            <!--Manufacturing Info-->
+            <TextBlock Text="Manufacturing Info" FontWeight="Bold" Margin="0 10"></TextBlock>
+            <!--Work Centers-->
+            <TextBlock Text="Work Centers"></TextBlock>
+            <!-- Checkboxes -->
+            <Grid Margin="0 10 0 0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0" Margin="0 0 10 0">
+                    <CheckBox x:Name="WeldCheckbox">Weld</CheckBox>
+                    <CheckBox>Assembly</CheckBox>
+                    <CheckBox>Plasma</CheckBox>
+                    <CheckBox>Laser</CheckBox>
+                    <CheckBox>Purchase</CheckBox>
+                </StackPanel>
+                <StackPanel Grid.Column="1" >
+                    <CheckBox>Lathe</CheckBox>
+                    <CheckBox>Drill</CheckBox>
+                    <CheckBox>Fold</CheckBox>
+                    <CheckBox>Roll</CheckBox>
+                    <CheckBox>Saw</CheckBox>
+                </StackPanel>
+            </Grid>
+            <!--Length-->
+            <TextBlock Text="Length"></TextBlock>
+            <TextBox Padding="2"></TextBox>
+            <!--Mass-->
+            <TextBlock Text="Mass"></TextBlock>
+            <TextBox IsReadOnly="True" Background="#eeeeee" Padding="2"></TextBox>
+            <!--Finish-->
+            <TextBlock Text="Finish"></TextBlock>
+            <ComboBox SelectedIndex="0" Padding="2">
+                <ComboBoxItem>Painted</ComboBoxItem>
+                <ComboBoxItem>Not Painted</ComboBoxItem>
+            </ComboBox>
+            <!--Purchase Information-->
+            <TextBlock Text="Purchase Information"></TextBlock>
+            <ComboBox SelectedIndex="0" Padding="2">
+                <ComboBoxItem>Rubber</ComboBoxItem>
+                <ComboBoxItem>Not Painted</ComboBoxItem>
+            </ComboBox>
+            <!--Supplier Name-->
+            <TextBlock Text="Supplier Name"></TextBlock>
+            <TextBox Padding="2"></TextBox>
+            <!--Supplier Code-->
+            <TextBlock Text="Supplier Code"></TextBlock>
+            <TextBox Padding="2"></TextBox>
+            <!--Additional Information-->
+            <TextBlock Text="Additional Information" FontWeight="Bold" Margin="0 10"></TextBlock>
+            <!--Note-->
+            <TextBlock Text="Note"></TextBlock>
+            <TextBox Padding="2"></TextBox>
+
+
+
+        </StackPanel>
+    </Border>
 </Window>

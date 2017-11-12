@@ -1,0 +1,48 @@
+﻿<Window x:Class="yydo.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:yydo"
+        mc:Ignorable="d"
+        Title="Kullanıcı Girişi" 
+        Height="480" 
+        Width="640">
+    <Border Padding="30">
+        <StackPanel>
+            <Image MaxHeight="125" MaxWidth="400" Source="Resources/Images/Roketsan25-Eng.png" Height="100"/>
+            <Grid MaxWidth="400">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0">
+                    <TextBlock Text="Kullanıcı Bilgilerini Giriniz" FontWeight="Bold" Margin="0 10"></TextBlock>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*" />
+                            <ColumnDefinition Width="3*" />
+                        </Grid.ColumnDefinitions>
+                        <StackPanel Grid.Column="0">
+                            <TextBlock Margin="0 0 0 5" Text="Kullanıcı Adı" Grid.Column="0"></TextBlock>
+                            <TextBlock Margin="0 5 0 0" Text="Şifre"></TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Column="1">
+                            <TextBox Padding="2" Margin="0 0 0 5"></TextBox>
+                            <TextBox Padding="2" Margin="0 5 0 0"></TextBox>
+                            <Button Margin="0 10 0 0">
+                                GİRİŞ
+                                <Button.Resources>
+                                    <Style TargetType="{x:Type Border}">
+                                        <Setter Property="CornerRadius" Value="3"></Setter>
+                                    </Style>
+                                </Button.Resources>
+                            </Button>
+                        </StackPanel>
+                    </Grid>
+                </StackPanel>
+                <Image MaxHeight="140" MaxWidth="140" Grid.Column="1" Source="Resources/Images/padlock-154684_640.png" Margin="0,0,-50,0"></Image>
+            </Grid>
+        </StackPanel>
+    </Border>
+</Window>
