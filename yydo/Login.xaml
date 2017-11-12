@@ -34,7 +34,7 @@
                                 GİRİŞ
                                 <Button.Resources>
                                     <Style TargetType="{x:Type Border}">
-                                        <Setter Property="CornerRadius" Value="3"></Setter>
+                                        <Setter Property="CornerRadius" Value="5"></Setter>
                                     </Style>
                                 </Button.Resources>
                             </Button>
